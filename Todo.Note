@@ -1,0 +1,16 @@
+if we make all the data gatherer in each seperate class and call everything that we need from a controller
+I think it will maek everything look more simple and easier to read and understand
+
+So the measures I should take to fast forward the project are:
+1. Modelling the data
+2. designing the new layout
+3. Creating the data Providers or whatever it is should be called
+4. Making Controllers
+5. Connecting all the dots.
+
+Damn....that is no easy thing to do. Nor it is a small thing. But, I should do it. remember HER!
+
+NOte To self
+1. Should consider using the model class to provide the data gathering. Or, we could seperate it. which is better
+2. Look deeper into services and Interfaces.
+3. Doesn't matter how much dependency u use. Just get it done. Make it do something.

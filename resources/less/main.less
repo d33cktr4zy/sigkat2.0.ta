@@ -1,0 +1,152 @@
+@import (reference) "vars";
+
+body
+{
+  font-family: @paragraph-font;
+  font-size: 1.4em;
+  background-color: @page-bg;
+}
+
+
+#pageWrapper
+{
+  position: relative;
+  overflow: hidden;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#toolbar
+{
+  background-color: @base-red;
+  color: @light-text;
+  border-bottom: 3px solid @light-text;
+  /*min-height: 30px;*/
+  margin-top: 5px;
+  border-radius: 10px 10px 0px 0px;
+  padding-top: 3px;
+  padding-left: 10px;
+  border-top: 3px solid @wrapper-border;
+  border-left: 3px solid @wrapper-border;
+  border-right: 3px solid @wrapper-border;
+
+  a
+  {
+    color: @light-text;
+  }
+
+}
+
+#banner
+{
+  min-width: 50px;
+  background-color: rgba(255, 245, 204, 0.71);
+  border-bottom: 2px solid @wrapper-border;
+  background-image: url('../images/bannerBG.jpg');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 50%;
+  border-right: 3px solid @wrapper-border;
+  border-left: 3px solid @wrapper-border;
+}
+
+#navbar
+{
+  background-color: @base-red;
+  color: #fff;
+  border-bottom: 2px solid @wrapper-border;
+  border-right: 3px solid @wrapper-border;
+  border-left: 3px solid @wrapper-border;
+}
+
+/*@media (min-width:480px)*/
+/*{*/
+#searchBox
+{
+  border-radius: 0px 10px 0px 10px;
+  float: right;
+  min-width: 150px;
+  height: 25px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+/*}*/
+
+#mainNavi
+{
+  list-style-type: none;
+  text-align: center;
+  margin: 2px auto;
+
+  a
+  {
+    color: @light-text;
+    font-style: normal;
+    /*font-variant: small-caps;*/
+    text-align: center;
+    font-size: 14pt;
+    font-family: 'Slabo 27px', serif;
+  }
+
+  li > a
+  {
+    text-align: justify;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+  }
+
+  .btn-group
+  {
+    padding-left: 20px;
+    border-right: 1px solid @light-text;
+    border-left: 1px solid @light-text;
+    padding-right: 20px;
+    margin-right: -5px;
+  }
+
+  .dropdown-menu
+  {
+    background-color: @base-red;
+    a:hover
+    {
+      border-top: 1px solid @wrapper-border;
+      border-bottom: 1px solid @wrapper-border;
+      color: @base-red;
+      font-weight: bold;
+      background-color: @page-bg;
+    }
+
+  }
+}
+
+#content
+{
+  min-height: 500px;
+  border-right: 3px solid @wrapper-border;
+  border-left: 3px solid @wrapper-border;
+
+}
+
+#footer
+{
+  background-color: @base-red;
+  min-height: 30px;
+  border-radius: 0px 0px 10px 10px;
+  border-top: 3px solid @wrapper-border;
+  border-bottom: 3px solid @wrapper-border;
+  border-right: 3px solid @wrapper-border;
+  border-left: 3px solid @wrapper-border;
+  color: #ffffff;
+  text-align: right;
+  padding-top: 3px;
+  padding-right: 5px;
+}
+
+
+#mainNavi
+{
+
+}
+
