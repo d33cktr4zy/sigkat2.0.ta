@@ -22,7 +22,7 @@ class Umat extends Model
 		'id_keluarga',
 		'id_lingkungan',
 		'path_gambar',
-		'id_user',
+		'id_umat',
 	];
 
 	//Relationship

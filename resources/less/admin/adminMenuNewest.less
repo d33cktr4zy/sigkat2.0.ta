@@ -1,0 +1,109 @@
+@import (reference) "../vars";
+
+#adminNav {
+  //width: 95%;
+  //display: table;
+
+  height: 40px;
+
+  z-index: +200;
+
+  margin: 0 auto;
+
+  //background: #000;
+
+  //float: none;
+
+  .admin-menu{
+    position: absolute;
+    top: 0;
+    left: 33%;
+    //right: 0;
+
+    min-width: 320px;
+
+    margin: 0 auto;
+
+    text-align: center;
+    padding:0;
+
+    float: left;
+    li{
+
+      background: @base-red; /* for non-css3 browsers */
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='tint(@base-red,30%)', endColorstr='@base-red'); /* for IE */
+      background: -webkit-gradient(linear, left top, left bottom, from(tint(@base-red,30%)), to(@base-red)); /* for webkit browsers */
+      background: -moz-linear-gradient(top,  tint(@base-red,30%),  @base-red); /* for firefox 3.6+ */
+
+      border: solid 1px lighten(@base-red, 60%);
+      -webkit-border-radius: 2em;
+      -moz-border-radius: 2em;
+      border-radius: 2em;
+      -webkit-box-shadow: 0 5px 8px 1px rgba(0, 0, 0, .5);
+      -moz-box-shadow: 0 5px 8px 1px rgba(0, 0, 0, .5);
+      box-shadow: 0 5px 8px 1px rgba(0, 0, 0, .5);
+
+      display: inline;
+      list-style:none;
+      float: left;
+
+      right: 33%;
+
+      a {
+        display:block;
+        padding: 3px 8px;
+        text-transform: none;
+        text-decoration: none;
+        color: #999;
+        font-weight: bold;
+
+        &:hover {
+          color: #000;
+        }
+      }
+
+      ul{
+        //second level
+        display:none;
+        li{
+          ul{
+            //third level
+            display:none;
+
+          }
+        }
+      }
+
+
+      &:hover, .hover{
+        ul {
+          position: absolute;
+          display: inline;
+          left: 0;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          li{
+            float: left;
+            ul{
+              display: block;
+            }
+
+            a{
+              color:#000;
+            }
+          }
+        }
+
+      }
+
+      li{
+        a{
+          &:hover {
+            color: #357;
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,12 @@ body
   background-color: @page-bg;
 }
 
+#dataCol
+{
+  .row {
+    margin-right: 0;
+  }
+}
 
 #pageWrapper
 {
@@ -15,7 +21,7 @@ body
 
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 98%;
 }
 
 #toolbar
@@ -74,52 +80,7 @@ body
 }
 /*}*/
 
-#mainNavi
-{
-  list-style-type: none;
-  text-align: center;
-  margin: 2px auto;
 
-  a
-  {
-    color: @light-text;
-    font-style: normal;
-    /*font-variant: small-caps;*/
-    text-align: center;
-    font-size: 14pt;
-    font-family: 'Slabo 27px', serif;
-  }
-
-  li > a
-  {
-    text-align: justify;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-  }
-
-  .btn-group
-  {
-    padding-left: 20px;
-    border-right: 1px solid @light-text;
-    border-left: 1px solid @light-text;
-    padding-right: 20px;
-    margin-right: -5px;
-  }
-
-  .dropdown-menu
-  {
-    background-color: @base-red;
-    a:hover
-    {
-      border-top: 1px solid @wrapper-border;
-      border-bottom: 1px solid @wrapper-border;
-      color: @base-red;
-      font-weight: bold;
-      background-color: @page-bg;
-    }
-
-  }
-}
 
 #content
 {

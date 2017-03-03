@@ -12,6 +12,7 @@ class Keluarga extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'id_keluarga',
         'id_kk',
         'id_lingkungan',
     ];

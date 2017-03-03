@@ -2,16 +2,20 @@
 
 /*styles for forum highlights on home*/
 
-#forum-highlight
-{
-  margin-left:0px;
-}
-
 #forumHighlights
 {
-  width:100px;
+  margin-left:25px;
+  margin-right: 10px;
 
+  padding-left: 0;
+  padding-right: 0;
 
+  .rounded-border-bottom-left;
+  .rounded-border-bottom-right;
+  .rounded-border-top-left;
+  .rounded-border-top-right;
+
+  border:1px solid @base-red;
   .horizontal-ruler
   {
     background-color: @base-red;
@@ -81,9 +85,20 @@
     text-align: right;
   }
 
-  .header {
+   .header {
+     .rounded-border-top-left;
+     .rounded-border-top-right;
+
     background-color: @wrapper-border;
     color: @light-text;
   }
+}
+
+
+
+#forum-highlight
+{
+  //width:100%;
+
 }
 /*end styles for forum highlights on home*/

@@ -1,0 +1,403 @@
+@import (reference) "../vars";
+
+/*styles used for admin menu */
+//the admin bar
+#adminNav {
+  //the container for the admin menu bar
+  width: 95%;
+
+  display: table;
+  margin-left: 2.5%;
+  //-webkit-border-radius: .6em;
+  //-moz-border-radius: .6em;
+  //border-radius: .6em;
+  //
+  //-webkit-box-shadow: 0 8px 8px 1px rgba(0, 0, 0, .2);
+  //-moz-box-shadow: 0 8px 8px 1px rgba(0, 0, 0, .2);
+  //box-shadow: 0 8px 8px 1px rgba(0, 0, 0, .2);
+  //
+  //background: #ececec; /* for non-css3 browsers */
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a9a9a9', endColorstr='#7a7a7a'); /* for IE */
+  //background: -webkit-gradient(linear, left top, left bottom, from(#f4f7ee), to(#d0c8c9)); /* for webkit browsers */
+  //background: -moz-linear-gradient(top, #f4f7ee, #d0c8c9); /* for firefox 3.6+ */
+
+  float: none;
+  //border: solid 1px #6d6d6d;
+
+}
+//the admin menu
+.admin-menu {
+  //the first unordered list
+  font-family: 'Source Sans Pro', sans-serif;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  //position: inherit;
+  z-index: +100;
+
+  position: inherit;
+  align-items: stretch;
+
+  padding: 0px 6px 0;
+
+  list-style: none;
+
+  @media screen and (max-width: 425px){
+    display:block;
+    float: left;
+    text-align: left;
+  }
+
+  > li{
+    //each of the list items right after the first ul
+    //width: 100%;
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: @base-red; /* for non-css3 browsers */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='tint(@base-red,30%)', endColorstr='@base-red'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(tint(@base-red,30%)), to(@base-red)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  tint(@base-red,30%),  @base-red); /* for firefox 3.6+ */
+
+    border: solid 1px lighten(@base-red, 60%);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    -webkit-box-shadow: 0 5px 8px 1px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 5px 8px 1px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, .5);
+
+    display: inline-block;
+    position: static;
+
+    @media screen and (max-width: 425px){
+      display:block;
+      width: 100%;
+      float: left;
+      text-align: left;
+    }
+
+    &:hover span {
+      transform: rotate(-90deg);
+    }
+
+    a {
+      //the style for all child anchor in the first ul
+      font-weight: bold;
+      color: @light-text;
+      text-decoration: none;
+      display: inline-block;
+      padding:  5px 15px;
+      margin: 0;
+      //-webkit-border-radius: 2.3em;
+      //-moz-border-radius: 2.3em;
+      text-shadow: 0 1px 1px 5px rgba(0,0,0,.3);
+
+
+    }
+
+    &:hover > ul{
+      //changing the ul display style when the li:hover ed.
+      //display: inherit;
+
+    }
+
+    //second level
+    > ul {
+      //style for the second level ul
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      position: relative;
+      top: 0px;
+      left:0;
+      z-index: +100;
+      list-style: none;
+
+
+      @media screen and (max-width: 991px){
+        right: 0;
+        width: auto;
+      }
+      //border: solid 1px #b4b4b4;
+      //-webkit-border-radius: 10px;
+      //-moz-border-radius: 10px;
+      //border-radius: 10px;
+      //-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+      //-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+      //box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+
+       >li {
+        //style for each second level li
+        position: inherit;
+        display: inline-block;
+        left: 0;
+         top:25px;
+
+
+
+        &:hover > ul {
+          display: inline;
+        }
+
+        > a {
+          background: #ddd; /* for non-css3 browsers */
+          filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='darken(#fff,50%)'); /* for IE */
+          background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(darken(#fff, 50%))); /* for webkit browsers */
+          background: -moz-linear-gradient(top,  #fff,  darken(#fff, 50%)); /* for firefox 3.6+ */
+          color: #000;
+          width: 100%;
+          white-space: nowrap;
+          margin-bottom: 5px;
+
+          border: 1px solid grey;
+          -webkit-border-radius: 1.3em;
+          -moz-border-radius: 1.3em;
+          border-radius: 1.3em;
+
+          -webkit-box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .5);
+          -moz-box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .5);
+          box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .5);
+        }
+        //third level
+        ul{
+          display: inline; /* hiding the ul when parent li is not hovered */
+
+          white-space: nowrap;
+
+          z-index: +100;
+
+          position: absolute;
+          right:0;
+          top:25px;
+
+          list-style: none;
+
+          @media screen and (max-width:991px){
+            position: inherit;
+            width: 100%;
+            left: 0;
+          }
+
+          li{
+            display: inline-block;
+          }
+          a{
+            margin-bottom: 5px;
+
+            width: 100%;
+
+            color: @dark-text;
+
+            background: #ddd; /* for non-css3 browsers */
+            filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='darken(#fff,50%)'); /* for IE */
+            background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(darken(#fff, 50%))); /* for webkit browsers */
+            background: -moz-linear-gradient(top,  #fff,  darken(#fff, 50%)); /* for firefox 3.6+ */
+
+            border: 1px solid grey;
+            -webkit-border-radius: .3em;
+            -moz-border-radius: .3em;
+            border-radius: .3em;
+
+            -webkit-box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .5);
+            -moz-box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .5);
+            box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, .5);
+
+
+
+          }
+        }
+      }
+
+    }
+  }
+
+
+}
+
+/*
+/!* clearfix *!/
+:after
+{
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .admin-menu {
+  display: block;
+}
+* html .admin-menu {
+  height: 1%;
+}
+*/
+/*end styles used in admin Menu */
+
+
+
+
+/*
+  //first level menu
+  a
+  {
+    font-weight: bold;
+    color: #3e3c3c;
+    text-decoration: none;
+    display: block;
+    padding:  5px 15px;
+    margin: 0;
+    -webkit-border-radius: 2.3em;
+    -moz-border-radius: 2.3em;
+    text-shadow: 0 1px 1px rgba(113, 45, 35, .3);
+
+    /!* main level link hover *!/
+    :hover > span
+    {
+      transform: rotate(0deg);
+
+    }
+
+    > span
+    {
+      transform: rotate(-90deg);
+    }
+  }
+  li {
+    /!*margin: 0 5px;*!/
+    /!*padding: 0 0 8px;*!/
+    float: left;
+    position: relative;
+
+    list-style: none;
+    display: inline;
+
+
+    .current a,
+    li:hover > a
+    {
+      background: @base-red; /!* for non-css3 browsers *!/
+      filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#a1a1a1'); /!* for IE *!/
+      background: -webkit-gradient(linear, left top, left bottom, from(#bf6765), to(@base-red)); /!* for webkit browsers *!/
+      background: -moz-linear-gradient(top,  #bf6765,  @base-red); /!* for firefox 3.6+ *!/
+
+      color: #dedede;
+      border-top: solid 1px #f8f8f8;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+      -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+      text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+    }
+  }
+
+  /!* main level link *!/
+  /!* sub levels link hover *!/
+  ul li:hover a,
+  li:hover li a
+  {
+    background: none;
+    border: none;
+    color: #3c3c3c;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+  ul a:hover
+  {
+    background: #0399d4 !important; /!* for non-css3 browsers *!/
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#04acec', endColorstr='#0186ba'); /!* for IE *!/
+    background: -webkit-gradient(linear, left top, left bottom, from(#73292c), to(@base-red)) !important; /!* for webkit browsers *!/
+    background: -moz-linear-gradient(top,  #73292c,  @base-red) !important; /!* for firefox 3.6+ *!/
+
+    color: #fff !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  }
+  /!* level 2 list *!/
+  ul
+  {
+    background: #ddd; /!* for non-css3 browsers *!/
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cfcfcf'); /!* for IE *!/
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cfcfcf)); /!* for webkit browsers *!/
+    background: -moz-linear-gradient(top,  #fff,  #cfcfcf); /!* for firefox 3.6+ *!/
+
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 185px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    border: solid 1px #b4b4b4;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  }
+  /!* dropdown *!/
+  li:hover > ul
+  {
+    display: block;
+  }
+  ul li
+  {
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul a
+  {
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+  }
+  /!* level 3+ list *!/
+  ul ul
+  {
+    left: 150px;
+    top: -15px;
+  }
+  /!* rounded corners for first and last child *!/
+  ul li:first-child > a
+  {
+    -webkit-border-top-left-radius: 9px;
+    -moz-border-radius-topleft: 9px;
+    -webkit-border-top-right-radius: 9px;
+    -moz-border-radius-topright: 9px;
+  }
+  ul li:last-child > a
+  {
+    -webkit-border-bottom-left-radius: 9px;
+    -moz-border-radius-bottomleft: 9px;
+    -webkit-border-bottom-right-radius: 9px;
+    -moz-border-radius-bottomright: 9px;
+  }
+  /!* clearfix *!/
+  :after
+  {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}
+
+
+html[xmlns] .admin-menu {
+  display: block;
+}
+* html .admin-menu {
+  height: 1%;
+}
+/!*end styles used in admin Menu *!/
+*/

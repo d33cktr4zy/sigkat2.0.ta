@@ -1,0 +1,119 @@
+@import (reference) "vars";
+
+#data-umat
+{
+
+  margin-left: 15px;
+  padding-left: 10px;
+
+  .horizontal-ruler
+  {
+    height: 2px;
+    background: @base-red;
+  }
+
+  .row-spacer
+  {
+    height:20px;
+  }
+
+  #filters-well
+  {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    >.row
+    {
+      margin-left:0px;
+    }
+  }
+
+  @media screen and (max-width: 991px){
+    #table-row
+    {
+
+      #data-table
+      {
+        width: 750px;
+      }
+      overflow: auto;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
+
+  #table-row
+  {
+    .pagination
+    {
+
+      font-family: @fantasy-font;
+      font-size: 15px;
+      width: 100%;
+
+      a {
+        color: @light-text;
+        background-color: @base-red;
+      }
+
+      .active > span
+      {
+        color: @light-text;
+        background: lighten(@base-red, 30%);
+        border-color: #ddd;
+      }
+
+      margin-top: 5px;
+      margin-bottom:0;
+      width: 100%;
+      align-content: stretch;
+    }
+  }
+
+  #data-table
+  {
+    margin-bottom:0;
+
+    th
+    {
+      color: @light-text;
+
+      background: tint(@base-red, 30%);
+
+      border:1px solid @base-red;
+      border-bottom: 3px solid @base-red;
+    }
+
+    tr:nth-child(odd)
+    {
+      background: lighten(@page-bg, 10%);
+    }
+
+    tr:nth-child(even)
+    {
+      background: lighten(@page-bg, 20%);
+    }
+
+    tr:last-child
+    {
+      border-bottom: 1px solid @base-red;
+
+    }
+
+    td:first-child
+    {
+      border-left: 1px solid @base-red;
+    }
+    td:last-child
+    {
+      border-right: 1px solid @base-red;
+
+    }
+
+
+
+
+  }
+
+
+}

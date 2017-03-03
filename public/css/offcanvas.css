@@ -20,7 +20,7 @@ body {
         z-index: 1000; 
         float: right; 
         top:30%;
-        right:0;
+        right: -1.5em;
 
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
@@ -33,6 +33,8 @@ body {
         color: #fff;
         background: #870000;
         border: 1px solid white;
+
+        padding-bottom: 0.5em;
 
         -webkit-border-radius: 1em;
         -moz-border-radius: 1em;

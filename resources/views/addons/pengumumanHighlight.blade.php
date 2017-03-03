@@ -3,7 +3,7 @@
         <h2>Pengumuman Terakhir</h2>
         <div class="horizontal-ruler"></div>
         <div class="row">
-            <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 pengumuman">
             @foreach($highlightPengumuman as $tanggal=>$pengumuman)
                 {{--<hr/>--}}
                 @foreach($pengumuman as $data)
@@ -14,15 +14,15 @@
                             <div class="col-xs-3 col-md-3">
                                 <h3 align="right">{!! \Carbon\Carbon::parse($tanggal)->format('d-m-Y') !!}</h3>
                             </div>
-                            <hr/>
                         </div>
+                            <div class="title-ruler"></div>
                         <div class="row">
                             <div class="col-xs-12 col-md-12">
                                 <p>{!! substr($data->isi_pengumuman,0,300).'...' !!}</p>
-                                <hr/>
                             </div>
                         </div>
                 @endforeach
+                    <div class="item-ruler"></div>
             @endforeach
             </div>
         </div>

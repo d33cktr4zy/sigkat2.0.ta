@@ -9,9 +9,9 @@
 {{-- Listing all the includes that needed to load standard Master Templates --}}
 @include('templates.generic.header')
 @include('templates.generic.footer')
-@include('templates.metaFoot')
 {{-- metaHead Templates need to load last so that any includes that contain head has been loaded --}}
 @include('templates.metaHead')
+@include('templates.metaFoot')
 @append
 
 @yield('includes')
@@ -68,7 +68,7 @@
                                     @if($__env->yieldContent('adminSidebar') != "")
                                     @yield('adminSidebar')
                                     @endif
-                                    <!-- generalSidebar start -->@yield('generalSidebar')<!-- generalSidebar end -->
+                                            <!-- generalSidebar start -->@yield('generalSidebar')<!-- generalSidebar end -->
                                 </div><!--end sidebarCol -->
                             </div><!-- end sidebar-offcanvas -->
                         @endif
@@ -76,6 +76,8 @@
         </div><!-- closing Content -->
         @yield('footer')
     </div> <!--Closing for PageWrapper -->
+</div>
 @yield('metaFooter')
+
 </body>
 </html>

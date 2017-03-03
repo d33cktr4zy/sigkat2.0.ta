@@ -1,5 +1,5 @@
 @if(isset($forumHighlight))
-    <div class="container-fluid" id="forumHighlights">
+    <div id="forumHighlights" class="container-fluid">
         <div class="header">
         <h3>Kiriman Forum Gereja Terbaru</h3>
         </div>

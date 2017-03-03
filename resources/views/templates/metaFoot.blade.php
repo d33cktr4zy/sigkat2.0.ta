@@ -1,5 +1,5 @@
 @section('metaFooter')
-        @parent
+@parent
 <!--
 this is the footer of the html
 it will contain eveything that need to be placed in the page
@@ -15,6 +15,7 @@ right outside the body tag and before html tag
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/js/offcanvas.js"></script>
+{{--{!! dd($__env->yieldContent('footScript')) !!}--}}
 
 @yield('footScript')
 

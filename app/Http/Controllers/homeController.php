@@ -22,4 +22,6 @@ class homeController extends Controller
             'forumHighlight' => $highlightForum
         ]);
     }
+
+
 }
